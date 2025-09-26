@@ -2,6 +2,12 @@ header {
   background-color: rgb(248, 167, 170);
 }
 
+html,
+body,
+main {
+  background-color: aqua;
+}
+
 .bg-marco {
   background-color: rgb(248, 167, 170);
 }
@@ -12,4 +18,11 @@ header {
 
 .btn {
   background-color: rgb(248, 167, 170);
+}
+
+.patatino {
+  background-color: rgb(248, 167, 170);
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
 }

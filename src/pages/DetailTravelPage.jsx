@@ -37,10 +37,10 @@ const DetailTravelPage = () => {
         <div className="col-12">
           <h2 className='text-center'>Partecipanti</h2>
         </div>
-        <div className="col-12 my-3">
-          {travel.travelers.map((traveler) => {
-            return (
-              <>
+        {travel.travelers.map((traveler) => {
+          return (
+            <>
+              <div className="col-12 my-3">
                 <div className="accordion" >
                   <div className="accordion-item">
                     <h2 className="accordion-header">
@@ -72,10 +72,10 @@ const DetailTravelPage = () => {
                     </div>
                   </div>
                 </div>
-              </>
-            )
-          })}
-        </div>
+              </div>
+            </>
+          )
+        })}
       </div>
     </div>
   )

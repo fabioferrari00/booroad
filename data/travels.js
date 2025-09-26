@@ -144,6 +144,30 @@ const travels = [
         email: "laura.gatti@email.com",
         phone: "+39 347 2233445",
         fiscalCode: "GTTLRU97L20H501O"
+      },
+      {
+        id: 6,
+        name: "Fabio",
+        surname: "Ferrari",
+        email: "fabio.ferrari@email.com",
+        phone: "+39 347 2233445",
+        fiscalCode: "FRRFBA97L20H501O"
+      },
+      {
+        id: 7,
+        name: "Melania",
+        surname: "Picone",
+        email: "melania.picone@email.com",
+        phone: "+39 347 2233445",
+        fiscalCode: "PCNMLN97L20H501O"
+      },
+      {
+        id: 8,
+        name: "Marco",
+        surname: "Bacci",
+        email: "marco.bacci@email.com",
+        phone: "+39 347 2233445",
+        fiscalCode: "BCCMRC97L20H501O"
       }
     ]
   },
