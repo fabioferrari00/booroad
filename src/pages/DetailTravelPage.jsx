@@ -18,7 +18,6 @@ const DetailTravelPage = () => {
       lowerCase(`${traveler.surname} ${traveler.name}`).includes(search)
     );
   });
-  console.log(filteredArray);
 
   // const [travel, setTravel] = useState(travels[id])
 
@@ -43,7 +42,6 @@ const DetailTravelPage = () => {
               </figcaption>
             </div>
           </div>
-          <Link className="btn btn-primary" to={`/`}>Torna alla lista dei viaggi</Link>
         </div>
         <div className="col-12">
           <h2 className='text-center'>Partecipanti</h2>
@@ -60,7 +58,7 @@ const DetailTravelPage = () => {
                 <div className="accordion" >
                   <div className="accordion-item">
                     <h2 className="accordion-header">
-                      <button className="patatino" type="button" data-bs-toggle="collapse" data-bs-target={`#${traveler.id}`} aria-expanded="false" aria-controls="collapseOne">
+                      <button className="traveler-card" type="button" data-bs-toggle="collapse" data-bs-target={`#${traveler.id}`} aria-expanded="false" aria-controls="collapseOne">
                         {traveler.name} {traveler.surname}
                       </button>
                     </h2>
@@ -93,6 +91,7 @@ const DetailTravelPage = () => {
           )
         })}
       </div>
+      <Link className="return-home text-end fs-1" to={`/`}><i className="fa-solid fa-house"></i></Link>
     </div>
   )
 }
