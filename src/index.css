@@ -1,28 +1,37 @@
+* {
+  color: rgba(0, 0, 0, 1);
+}
+
 header {
-  background-color: rgb(248, 167, 170);
+  background-color: #d6a95c;
 }
 
 html,
-body,
-main {
-  background-color: aqua;
+body {
+  background-image: url('../public/sfondo-salmone.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .bg-marco {
-  background-color: rgb(248, 167, 170);
+  background-color: #d6a95c;
+}
+
+.bg-sand {
+  background-color: rgb(244, 231, 208);
 }
 
 .travel-card {
-  box-shadow: 0px 0px 15px 7px #888888;
-}
-
-.btn {
-  background-color: rgb(248, 167, 170);
+  box-shadow: 0px 0px 15px 7px rgb(244, 231, 208);
+  opacity: 0.9;
 }
 
 .patatino {
-  background-color: rgb(248, 167, 170);
+  background-color: #d6a95c;
   text-align: center;
   width: 100%;
   border-radius: 5px;
+  color: white;
 }

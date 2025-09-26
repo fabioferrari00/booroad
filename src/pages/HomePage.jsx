@@ -18,7 +18,7 @@ const HomePage = () => {
                   <div className="p-2 fs-4 header-card bg-marco">
                     {travel.city}
                   </div>
-                  <div className="card-body">
+                  <div className="card-body bg-sand">
                     <figure>
                       <blockquote className="blockquote">
                         <p>{travel.name}</p>

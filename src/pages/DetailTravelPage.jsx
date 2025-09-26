@@ -1,15 +1,26 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom';
 import travels from '../../data/travels';
+import { useState, useEffect } from 'react';
 
 const DetailTravelPage = () => {
 
   const { id } = useParams();
   const travel = travels[id - 1];
+  const [filter, setFilter] = useState("");
+
+  const lowerCase = (str) => str.toLowerCase().trim();
+
+  const filteredArray = travel.travelers.filter((traveler) => {
+    const search = lowerCase(filter);
+    return (
+      lowerCase(`${traveler.name} ${traveler.surname}`).includes(search) ||
+      lowerCase(`${traveler.surname} ${traveler.name}`).includes(search)
+    );
+  });
+  console.log(filteredArray);
 
   // const [travel, setTravel] = useState(travels[id])
-
-  console.log(travel)
 
   return (
     <div className='container'>
@@ -37,7 +48,12 @@ const DetailTravelPage = () => {
         <div className="col-12">
           <h2 className='text-center'>Partecipanti</h2>
         </div>
-        {travel.travelers.map((traveler) => {
+        <div className='text-end'>
+          <input type="text" name="name" id="name" placeholder='Cerca partecipante...' value={filter} onChange={(e) => {
+            setFilter(e.target.value)
+          }} />
+        </div>
+        {filteredArray.map((traveler) => {
           return (
             <>
               <div className="col-12 my-3">
@@ -50,7 +66,7 @@ const DetailTravelPage = () => {
                     </h2>
                     <div id={traveler.id} className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                       <div className="accordion-body">
-                        <ul>
+                        <ul className='list-unstyled'>
                           <li>
                             <p>
                               <strong>Email:</strong> {traveler.email}
